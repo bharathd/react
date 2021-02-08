@@ -12,9 +12,9 @@ const Order = () => {
   }, []);
   console.log(order);
   return (
-    <div>
+    <div className=" ml-5 mr-5">
       <h1>Order Details</h1>
-      <Table striped bordered hover>
+      <Table striped bordered hover className="mb-5">
         <tbody>
           <tr>
             <td>Order Id</td>
@@ -42,7 +42,11 @@ const Order = () => {
           </tr>
           <tr>
             <td>Status</td>
-            <td>{order?.status}</td>
+            <td className={`first-letter ${order.status}`}>{order.status}</td>
+          </tr>
+          <tr>
+            <td>Completed</td>
+            <td>{order.complete ? "Yes" : "No"}</td>
           </tr>
           <tr>
             <td>Shipping Address</td>

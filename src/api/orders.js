@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Get recent order
-export const getRecentOrder = async () => {
+// Get all order
+export const getMyOrder = async () => {
   const result = await axios.get("http://localhost:3001/orders");
   return result.data;
 };

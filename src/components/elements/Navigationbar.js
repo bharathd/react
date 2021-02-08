@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HouseFill } from "react-bootstrap-icons";
-import { Navbar, Button, Badge } from "react-bootstrap";
+import { Navbar, Button, Badge, Nav } from "react-bootstrap";
 
 const Navigationbar = () => {
   return (
-    <Navbar bg="light">
+    <Navbar bg="primary" variant="dark">
       <Navbar.Brand href="#home">
-        <Link class="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/">
           <HouseFill />
         </Link>
       </Navbar.Brand>
@@ -19,10 +19,13 @@ const Navigationbar = () => {
             <Button variant="success">My Orders</Button>
           </Link>
         </Navbar.Text>
+        <Nav className="ml-auto">
+          <Nav.Link href="#">Account</Nav.Link>
+          <Nav.Link href="#">Recently Viewed</Nav.Link>
+          <Nav.Link href="#">Order Status</Nav.Link>
+          <Nav.Link href="#">Saved Items</Nav.Link>
+        </Nav>
       </Navbar.Collapse>
-      <h1>
-        <Badge variant="primary">Mock JSON Data</Badge>
-      </h1>
     </Navbar>
   );
 };
